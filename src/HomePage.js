@@ -1,13 +1,17 @@
+
+import { Box } from '@mui/material';
 import AgeSelector from './AgeSelector'
 
-import { MainContainer } from './StyledComponents';
+import { ContentBox } from './StyledComponents';
 
 export default function HomePage({setSubmittedBirthDate}) {
   return (
-    <MainContainer>
+    <Box sx={{width:"100%",height:"100vh",display:"flex",justifyContent:"center",alignItems:"center"}}>
+      <ContentBox sx={{width:"50%"}}>
         <AgeSelector
             setSubmittedBirthDate={setSubmittedBirthDate}
         />
-    </MainContainer>
+    </ContentBox>
+    </Box>
   );
 }

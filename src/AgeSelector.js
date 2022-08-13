@@ -18,7 +18,7 @@ const [year,setYear] = useState('')
 
   return (
     <Box sx={{display:"flex",flexDirection:"column"}}>
-        <h1>Please Enter Birthdate Below</h1>
+        <h1 style={{textAlign:'center'}}>Please Enter Birthdate Below</h1>
         <Box sx={{display:"flex"}}>
         <MonthSelector
             month={month}

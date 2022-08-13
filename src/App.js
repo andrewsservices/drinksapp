@@ -1,15 +1,19 @@
-import './App.css';
+import './App.css'; 
 
+import {useState, useEffect} from 'react'
 import { Routes, Route, useNavigate } from "react-router-dom";
 
-
+import Box from '@mui/material/Box';
 
 
 import HomePage from './HomePage'
-import Drinks from './Drinks'
+import DrinksPage from './DrinksPage'
+import DrinkDetails from './DrinkDetails'
 
 
 function App() {
+
+const [drinks,setDrinks] = useState([])  
 
 const navigate =  useNavigate() 
 
@@ -35,44 +39,37 @@ const setSubmittedBirthDate = ([month,date,year]) => {
   
 }
 
+useEffect(()=>{
+  fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
+  .then(res=>res.json())
+  .then(data=>{
+    setDrinks(data.drinks)
+  })
+},[])
 
 
-
-// useEffect(()=>{
-// const birthDateString = submittedBirthDate.toString()
-// const birthDateDate = new Date(birthDateString.replace(',',' '))
-// const birthDateTime = birthDateDate.getTime()
-
-// const diff_ms = Date.now()-birthDateTime
-// var age_dt = new Date(diff_ms);
-
-// const age = Math.abs(age_dt.getUTCFullYear() - 1970);
-
-
-// if(!isNaN(age)){
-//   console.log('age is now a number', age)
-//   if(age >= 21){
-//     navigate('/drinks')
-//   } else {
-//     alert('You are not old enough to view the drinks page.')
-//   }
-// } 
-
-
-// },[submittedBirthDate])
 
   return (
-    <div className="App">
+
+      <Box sx={{display:"flex",justifyContent:"center"}}>
       <Routes>
         <Route path="/" element={
           <HomePage
             setSubmittedBirthDate={setSubmittedBirthDate}
           />} 
         />
-        <Route path="/drinks" element={<Drinks />} />
+        <Route path="/drinks" element={
+          <DrinksPage 
+            drinks={drinks}
+        />} />
+        <Route path="/drink/:id" element={
+          <DrinkDetails
+            drinks={drinks}
+          />
+        }/>
       </Routes>
-      
-    </div>
+      </Box>
+
   );
 }
 
