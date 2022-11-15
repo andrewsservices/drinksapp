@@ -50,24 +50,11 @@ useEffect(()=>{
 
 
   return (
-
       <Box sx={{display:"flex",justifyContent:"center"}}>
-      <Routes>
-        <Route path="/" element={
+      
           <HomePage
             setSubmittedBirthDate={setSubmittedBirthDate}
-          />} 
-        />
-        <Route path="/drinks" element={
-          <DrinksPage 
-            drinks={drinks}
-        />} />
-        <Route path="/drink/:id" element={
-          <DrinkDetails
-            drinks={drinks}
           />
-        }/>
-      </Routes>
       </Box>
 
   );
