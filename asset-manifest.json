@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/drinks-app/static/css/main.08b8120b.css",
-    "main.js": "/drinks-app/static/js/main.16b6bce1.js",
+    "main.js": "/drinks-app/static/js/main.2a870f07.js",
     "static/js/787.28cb0dcd.chunk.js": "/drinks-app/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/drinks-app/index.html",
     "main.08b8120b.css.map": "/drinks-app/static/css/main.08b8120b.css.map",
-    "main.16b6bce1.js.map": "/drinks-app/static/js/main.16b6bce1.js.map",
+    "main.2a870f07.js.map": "/drinks-app/static/js/main.2a870f07.js.map",
     "787.28cb0dcd.chunk.js.map": "/drinks-app/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.08b8120b.css",
-    "static/js/main.16b6bce1.js"
+    "static/js/main.2a870f07.js"
   ]
 }
