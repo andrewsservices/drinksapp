@@ -1,4 +1,3 @@
-
 import './App.css'; 
 
 import {useState, useEffect} from 'react'
@@ -53,7 +52,7 @@ useEffect(()=>{
   return (
       <Box sx={{display:"flex",justifyContent:"center"}}>
       <Routes>
-        <Route exact path="/" element={
+        <Route exact path="/drinksapp" element={
           <HomePage
             setSubmittedBirthDate={setSubmittedBirthDate}
           />} 
