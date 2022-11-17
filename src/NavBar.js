@@ -12,7 +12,7 @@ export default function NavBar() {
         <AppBar position="static">
           <Toolbar>
             <Link
-              to={`/`}
+              to={`/drinksapp`}
               style={{color:"white",textDecoration:"none"}}
             >
             <Button 
